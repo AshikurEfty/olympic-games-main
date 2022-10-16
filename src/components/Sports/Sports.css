@@ -11,5 +11,7 @@
 .activity-container{
     background: #FFFFFF;
     margin-top: -205px;
+    padding-bottom: 32px;
+    border-radius: 0px 0px 10px 10px;
 
 }

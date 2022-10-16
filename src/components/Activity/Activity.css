@@ -20,7 +20,52 @@
     margin-left: 35px;
 }
 
-.break-part h2,h3{
+.break-part .breakTime{
     font-family: 'Roboto Condensed';
     margin-left: 35px;
+}
+.break-part .item{
+    font-family: 'Roboto Condensed';
+    margin-left: 35px;
+}
+.activity{
+    position: sticky;
+    top: 0px;
+}
+.break-btn{
+    margin-left: 25px;
+}
+.break-btn button {   
+	font-family: 'Roboto Condensed';
+	border: none;
+	background: #ffff;
+	margin-left: 12px;
+	padding: 5px;
+	border-radius: 8px;
+	cursor: pointer;
+    transition: all linear .3s;
+}
+.break-btn button:hover{
+    background: #0785CB;
+    color:#ffff;
+}
+.break-btn button:focus{
+    background: #0785CB;
+    color:#ffff;
+}
+.exercise-part{
+    margin-left: 35px;
+}
+.exercise-part h2{
+    margin-left : 0px !important;
+}
+.exercise-part button{
+    font-family: 'Roboto Condensed';
+    font-size: 16px;
+    padding: 10px 35px;
+    background: #0785CB;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+    color:#ffff;
 }

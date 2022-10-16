@@ -7,11 +7,7 @@ const Sports = () => {
     const [games, setGames] = useState([]);
 
     const [activity, setActivity] = useState([]);
-
-    // useEffect(() => {
-        
-    // },[])
-
+    
     useEffect(() =>{
         fetch('olympic.json')
         .then(res => res.json())
