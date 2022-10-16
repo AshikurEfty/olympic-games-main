@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Activity from '../Activity/Activity';
 import Game from '../Game/Game';
 import './Sports.css';
 
@@ -35,7 +36,8 @@ const Sports = () => {
                 }
             </div>
             <div className="activity-container">
-                <h3>Activity items: {activity.length}</h3>
+                <Activity 
+                activity={activity}></Activity>
             </div>
         </div>
     );
