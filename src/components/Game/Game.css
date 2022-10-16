@@ -34,4 +34,9 @@
 	padding-bottom: 10px;
 	border-radius: 10px;
     cursor: pointer;
+    transition: all linear .3s;
+}
+.select-btn:hover{
+    background: #FFBA2E;
+    color:#000;
 }

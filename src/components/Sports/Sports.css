@@ -1,9 +1,16 @@
 .sports-container{
     display: grid;
     grid-template-columns: 4fr 1fr;
+    margin-bottom: 50px;;
 }
 .game-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-left:50px;
+}
+.activity-container{
+    
+    background: #FFFFFF;
+    margin-top: -205px;
+
 }
