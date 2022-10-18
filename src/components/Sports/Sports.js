@@ -15,7 +15,6 @@ const Sports = () => {
     },[]);
 
     const handleAddToClick = (game)=>{
-        console.log(game);
         const newActivity = [...activity, game];
         setActivity(newActivity);
     }
