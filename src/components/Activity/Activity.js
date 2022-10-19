@@ -1,4 +1,4 @@
-import React, {useState } from 'react';
+import React, {useState} from 'react';
 import efty from '../../images/efty1.jpg';
 import './Activity.css';
 
@@ -12,6 +12,7 @@ const Activity = (props) => {
     }
 
     const [second, setSecond] = useState("0");
+
     const handleBreak = (e)=>{
             setSecond(e.target.name);
     }

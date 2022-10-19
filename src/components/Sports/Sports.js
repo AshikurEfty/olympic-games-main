@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { addToDb, getStroedCart } from '../../utilities/fakedb';
 import Activity from '../Activity/Activity';
 import Game from '../Game/Game';
 import './Sports.css';
@@ -14,9 +15,25 @@ const Sports = () => {
         .then(data => setGames(data))
     },[]);
 
+    useEffect(() =>{
+        const storedCart = getStroedCart();
+        const savedCart = [];
+        for(const id in storedCart){
+            const addedProduct = games.find(game=> game.id === id);
+            if(addedProduct){
+                const quantity = storedCart[id];
+                addedProduct.quantity = quantity;
+                savedCart.push(addedProduct);
+            }
+        }
+        setActivity(savedCart)
+    },[games])
+
     const handleAddToClick = (game)=>{
         const newActivity = [...activity, game];
         setActivity(newActivity);
+        addToDb(game.id);
+
     }
 
     return (
