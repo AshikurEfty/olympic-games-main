@@ -1,20 +1,28 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import efty from '../../images/efty1.jpg';
 import './Activity.css';
 
 const Activity = (props) => {
-
     const {activity} = props;
 
     let totalTime = 0;
+    let quantity = 0;
     for(const game of activity){
-        totalTime = totalTime + game.time;
+        quantity = quantity + game.quantity;
+        totalTime = totalTime + game.time * game.quantity;
     }
 
     const [second, setSecond] = useState("0");
 
+    useEffect(()=>{
+        const local = localStorage.getItem('break');
+        setSecond(local);
+    },[])
+
     const handleBreak = (e)=>{
             setSecond(e.target.name);
+            // addToDb(e.target.name)
+            localStorage.setItem("break",e.target.name)
     }
 
     return (
@@ -29,7 +37,7 @@ const Activity = (props) => {
             <hr />
             <div className="break-part">
                 <h2 className='breakTime'>Add Break Time</h2>
-                <h3 className='item'>Activity items: {activity.length}</h3>
+                <h3 className='item'>Activity items: {quantity}</h3>
                 <div className="break-btn">
                     <button name='10' onClick={handleBreak}>10s</button>
                     <button name='20' onClick={handleBreak}>20s</button>

@@ -29,10 +29,35 @@ const Sports = () => {
         setActivity(savedCart)
     },[games])
 
-    const handleAddToClick = (game)=>{
-        const newActivity = [...activity, game];
+    useEffect(()=>{
+        const storedCart = getStroedCart();
+        const savedCart = [];
+
+        for(const id in storedCart){
+            const addedGame = games.find(game => game.id === id);
+            if(addedGame){
+                const quantity = storedCart[id];
+                addedGame.quantity = quantity;
+                savedCart.push(addedGame);
+            }
+        }
+        setActivity(savedCart);
+    },[games])
+
+    const handleAddToClick = (selectedGame)=>{
+        let newActivity = [];
+        const exists = activity.find(game => game.id === selectedGame);
+        if(!exists){
+            selectedGame.quantity = 1;
+            newActivity= [...activity, selectedGame]
+        }
+        else{
+            const rest = activity.filter(game => game.id !== selectedGame.id);
+            exists.quantity = exists.quantity + 1;
+            newActivity = [...rest, exists];
+        }
         setActivity(newActivity);
-        addToDb(game.id);
+        addToDb(selectedGame.id);
 
     }
 
