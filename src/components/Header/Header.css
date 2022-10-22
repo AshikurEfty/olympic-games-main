@@ -18,3 +18,35 @@
     font-size: 22px;
     margin: 30px 30px 30px 50px;
 }
+
+/* media quaries */
+@media (max-width: 576px) {
+    .header img{
+        margin: 50px 25px 0px 50px;
+        width:100px;
+        height: 50px;
+    }
+    .header h1{
+        font-family: 'Roboto Condensed';
+        font-size: 24px;
+        color:#0785CB;
+        margin-bottom: 0px;
+        margin-top: 40px;
+        margin-left: -10px;
+    }
+}
+@media (max-width: 768px){
+    .header img{
+        margin: 50px 25px 0px 50px;
+        width:100px;
+        height: 50px;
+    }
+    .header h1{
+        font-family: 'Roboto Condensed';
+        font-size: 24px;
+        color:#0785CB;
+        margin-bottom: 0px;
+        margin-top: 40px;
+
+    }
+}

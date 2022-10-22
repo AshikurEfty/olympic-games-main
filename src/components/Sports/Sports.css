@@ -13,5 +13,49 @@
     margin-top: -205px;
     padding-bottom: 32px;
     border-radius: 0px 0px 10px 10px;
+}
 
+/* midea css */
+@media (max-width: 576px) {
+    .game-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-left:30px;
+    }
+    .activity-container{
+        background: #FFFFFF;
+        margin-top: -205px;
+        padding-bottom: 32px;
+        border-radius: 0px 0px 10px 10px;
+        margin-left: -89px;
+    }
+}
+
+@media (max-width: 768px) {
+    .game-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-left:30px;
+    }
+    .activity-container{
+        background: #FFFFFF;
+        margin-top: -205px;
+        padding-bottom: 32px;
+        border-radius: 0px 0px 10px 10px;
+        margin-left: -89px;
+    }
+}
+@media (max-width: 992px) {
+    .game-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-left:30px;
+    }
+}
+@media (max-width: 1200px) {
+    .game-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-left:30px;
+    }
 }

@@ -1,6 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import efty from '../../images/efty1.jpg';
+import {toast, ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './Activity.css';
+
+
 
 const Activity = (props) => {
     const {activity} = props;
@@ -12,6 +16,7 @@ const Activity = (props) => {
         totalTime = totalTime + game.time * game.quantity;
     }
 
+
     const [second, setSecond] = useState("0");
 
     useEffect(()=>{
@@ -21,9 +26,16 @@ const Activity = (props) => {
 
     const handleBreak = (e)=>{
             setSecond(e.target.name);
-            // addToDb(e.target.name)
-            localStorage.setItem("break",e.target.name)
+            localStorage.setItem("break",e.target.name);
     }
+
+    
+    const diffToast =()=>{
+        toast.success("Wow So Easy!",{
+            position: "bottom-right"
+        })
+    }
+
 
     return (
         <div className='activity'>
@@ -51,8 +63,9 @@ const Activity = (props) => {
                 <h2>Exercise Details</h2>
                 <h3>Exercise Time: {totalTime} s</h3>
                 <h3>Break Time: {second} s</h3>
-                <button>Activity Compeleted</button>
+                <button onClick={diffToast}>Activity Compeleted</button>
             </div>
+            <ToastContainer></ToastContainer>
            
         </div>
     );
