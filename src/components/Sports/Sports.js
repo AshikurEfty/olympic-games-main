@@ -57,7 +57,7 @@ const Sports = () => {
             newActivity = [...rest, exists];
         }
         setActivity(newActivity);
-        // addToDb(selectedGame.id);
+        addToDb(selectedGame.id);
 
     }
 
