@@ -13,7 +13,7 @@ const Activity = (props) => {
     let quantity = 0;
     for(const game of activity){
         quantity = quantity + game.quantity;
-        totalTime = totalTime + game.time * game.quantity;
+        totalTime = totalTime + game.time * quantity;
     }
 
 
